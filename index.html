@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang = "en-us">
+<head>
+	<!-- Webpage Title -->
+	<title>Cronicle | Welcoming the Next Level of Efficiency</title>
+
+	<!-- Website Icon -->
+	<link rel = "shortcut icon" type = "image" href = "main/image/logo.png">
+
+	<!-- Meta Tags -->
+	<meta charset = "UTF-8"> <!-- Language -->
+	<meta http-equiv='content-language' content='en-us'> <!-- Language -->
+
+	<meta name = "description" content = "Cronicle Technologies aim to change the way people work for the better. It's simpler, better organized, and more efficient than calendars."> <!-- Description -->
+
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1"> <!-- Mobile Responsiveness -->
+
+	<!-- Bootstrap 4.1 CSS Library -->
+	<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity = "sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin = "anonymous">
+
+	<!-- Main CSS -->
+	<link rel = "stylesheet" href = "main/css/style.css">
+
+	<style>
+		/** Header Content */
+		header img.background {
+			width: 50vw;
+			height: 135vh;
+
+			position: absolute;
+			top: -8.5%;
+			right: 0;
+			z-index: -1;
+		}
+
+		header img {
+			user-drag: none;  /** Disable User Select */
+		   	user-select: none;
+		   	-moz-user-select: none;
+		   	-webkit-user-drag: none;
+		   	-webkit-user-select: none;
+		   	-ms-user-select: none;
+		}
+
+		header div.text {
+			animation: fade-right 1.25s ease;
+		}
+
+		header button.primary {
+			height: 50px;
+			padding: 10px 20px;
+			margin-top: 35px;
+			margin-right: 25px;
+		}
+
+		header div.col-md-6 img {
+			box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .15);
+			margin-top: -5%;
+		}
+
+		header div.mention {
+			margin-top: 150px;
+			text-align: center;
+		}
+
+		header div.mention h2 {
+			color: #7c828d;
+			font-size: .95em;
+			margin-bottom: 50px;
+		}
+
+		header div.mention img {
+			margin-bottom: 75px;
+		}
+
+
+		/** Content Panels */
+		div.content {
+			border-radius: 5pxs;
+			padding: 100px 25px;
+			margin-bottom: 75px;
+		}
+
+		div.content button.primary {
+			margin-top: 35px;
+		}
+
+		div.recruit {
+			margin-top: 75px;
+		}
+
+		div.recruit div.col-xl-6 {
+			text-align: center;
+		}
+
+		div.recruit img[alt *= "Team Image"] {
+			max-width: 500px;
+
+			user-drag: none;  /** Disable User Select */
+		   	user-select: none;
+		   	-moz-user-select: none;
+		   	-webkit-user-drag: none;
+		   	-webkit-user-select: none;
+		   	-ms-user-select: none;
+		}
+
+		div.recruit img.system {
+			background-color: var(--cpurple);
+			border-radius: 5px;
+			box-shadow: 0 10px 20px 0 rgba(140, 82, 255, .45);
+			width: 55px;
+			height: 55px;
+		}
+
+		div.recruit p.highlight {
+			color: var(--cpurple);
+			font-weight: bold;
+			font-size: .95em;
+			margin-top: 45px;
+			margin-bottom: 20px;
+		}
+
+		div.recruit div.roles {
+			margin-top: 50px;
+		}
+
+		div.recruit img[alt *= "Tick"] {
+			margin-left: 35px;
+			margin-right: 15px;
+		}
+
+
+		/** Responsive CSS */
+		@media (max-width: 1400px) {
+			header img.background {
+				top: -15%;
+			}
+		}
+
+		@media (max-width: 1250px) {
+			header img.background {
+				top: -25%;
+			}
+
+			div.recruit img[alt *= "Team Image"] {
+				margin: 50px 0;
+			}
+		}
+
+		@media (max-width: 1000px) {
+			header img.background {
+				top: -30%;
+			}
+		}
+
+		@media (max-width: 992px) {
+			header img.background {
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class = "navbar navbar-expand-lg fixed-top">
+
+		<div class = "container">
+
+	  		<a class = "navbar-brand" href = "#">
+	  			<div class = "row">
+	  				<img src = "main/image/logo.png" alt = "Cronicle Logo" width = "50" height = "50">
+
+					<p>Cronicle</p>
+				</div>
+			</a>
+
+			<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "false" aria-label = "Toggle navigation">
+
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+
+			</button>
+
+		  	<div class = "collapse navbar-collapse" id = "navbarSupportedContent">
+		    	
+		    	<ul class = "navbar-nav mr-auto">
+		      		<li class = "nav-item">
+		        		<a class = "nav-link" href = "#">Features</a>
+		      		</li>
+		      		
+		      		<li class = "nav-item">
+		        		<a class = "nav-link" href = "#">Learning</a>
+		      		</li>
+		  
+				    <li class = "nav-item">
+				    	<a class = "nav-link" href = "#">Careers</a>
+				    </li>
+		   		</ul>
+
+		   		<span class = "d-flex">
+		   			<a class = "nav-link" href = "#" style = "padding-left: 0;">Contact Sales</a>
+		   		</span>
+
+		   		<span class = "d-flex">
+			    	<button class = "primary">Sign Up</button>
+				</span>
+
+				<span class = "d-flex">
+			    	<button class = "secondary">Log In</button>
+				</span>
+
+		  	</div>
+
+		</div>
+
+	</nav>
+
+	<!-- Header Content -->
+	<header>
+
+		<!-- Background Image -->
+		<img src = "image (index)/background.svg" alt = "Gradient Image" class = "background">
+
+		<div class = "container top full">
+
+			<div class = "row">
+
+				<div class = "col-md-6 text">
+
+					<h1>Welcoming the next level of efficiency</h1>
+
+					<p>Maximize your working hours by organizing your tasks. Remote work has never been so efficient.</p>
+
+					<div class = "row">
+
+						<button class = "primary">Sign Up Free</button>
+
+						<p style = "color: rgb(200, 200, 200); font-weight: bold; font-size: 0.95em; margin-top: 35px;">
+							FREE FOREVER.
+
+							<br>
+
+							NO CREDIT CARD REQUIRED.
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class = "col-md-6 image">
+
+					<img src = "image (index)/header software.png" alt = "Software Screenshot" class = "full">
+
+				</div>
+
+			</div>
+
+			<div class = "col-md-12 mention">
+
+				<h2>AS FEATURED IN</h2>
+
+				<a href = "https://kodingnext.com" target = "blank">
+
+					<img src = "image (index)/logo koding next.png" alt = "Koding Next Logo" height = "45">
+				
+				</a>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<!-- Productivity Content -->
+	<div class = "container full">
+
+			<div class = "row content" style = "background-color: #f8f7fe;">
+
+				<div class = "col-md-6">
+					<img src = "image (index)/productivity.png" alt = "Productivity Image" class = "full">
+				</div>
+
+				<div class = "col-md-1"></div>
+
+				<div class = "col-md-5">
+					<h2>Optimize your working experience from home</h2>
+
+					<p>Create goals, track your progress, and manage your assignments with a work management tool. With all your tasks in one place, you can get more done faster.</p>
+
+					<button class = "primary">Get Started</button>
+				</div>
+
+			</div>
+
+	</div>
+
+	<!-- Complexity Content -->
+	<div class = "container full">
+
+		<div class = "row content" style = "background-color: #fff8fb;">
+
+			<div class = "col-md-5">
+				<h2>Mitigate complexity and confusion at work</h2>
+
+				<p>Work smarter by overcoming misunderstanding of roles and responsibilities. Understand your tasks in hand, track your numerical targets, and stay in snyc with your work progress.</p>
+
+				<button class = "primary">Get Started</button>
+			</div>
+
+			<div class = "col-md-1"></div>
+
+			<div class = "col-md-6">
+				<img src = "image (index)/complexity.png" alt = "Complexity Image" class = "full">
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Customer Service Content -->
+	<div class = "container full">
+
+		<div class = "row content" style = "background-color: #f8f7fe;">
+
+			<div class = "col-md-6">
+				<img src = "image (index)/customer service.png" alt = "Customer Service Image" class = "full">
+			</div>
+
+			<div class = "col-md-1"></div>
+
+			<div class = "col-md-5">
+				<h2>Get the customer support you need</h2>
+
+				<p>From learning how our software works to documentation and trobleshooting, we are ready give the best quality service to our clients, anytime and anywhere.</p>
+
+				<button class = "primary">Get Started</button>
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Recruitment Content -->
+	<div class = "container recruit">
+
+		<div class = "row">
+
+			<div class = "col-xl-5">
+				<img src = "image (index)/icon system.svg" alt = "System Icon" class = "system">
+
+				<p class = "highlight">CREATE AN IMPACT</p>
+
+				<h2>Join our fast growing team from across the globe</h2>
+
+				<p>Behind this tech startup are people with adept talents and revolutionizing ideas. Be a part of Cronicle as we embrace complex challenges and deal with the latest technology.</p>
+
+				<div class = "row roles">
+					<img src = "image (index)/icon tick.svg" alt = "Tick" width = "25" height = "25">
+
+					<p>Engineering</p>
+
+					<img src = "image (index)/icon tick.svg" alt = "Tick" width = "25" height = "25">
+
+					<p>Product</p>
+
+					<img src = "image (index)/icon tick.svg" alt = "Tick" width = "25" height = "25">
+
+					<p>Marketing</p>
+				</div>
+			</div>
+
+			<div class = "col-xl-1"></div>
+
+			<div class = "col-xl-6">
+				<img src = "image (index)/team.png" alt = "Team Image" class = "full">
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Sign Up Content -->
+	<div class = "sign-up">
+
+		<div class = "container">
+
+			<div class = "row">
+
+				<div class = "col-sm-12">
+
+					<div class = "row">
+
+						<div class = "col-lg-2">
+
+							<img src = "main/image/footer sign up.png" alt = "Cronicle Logo" style = "height: 175px;">
+
+						</div>
+
+						<div class = "col-lg-7">
+
+							<h2>Welcoming the next level of efficiency.</h2>
+
+							<p>Maximize your working hours by organizing your tasks.</p>
+
+						</div>
+
+
+
+						<div class = "col-lg-2">
+
+							<button class = "primary">Sign Up</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer>
+
+		<div class = "container">
+
+			<div class = "row">
+					
+				<div class = "col-sm-3">
+
+					<h3>COMPANY</h3>
+
+					<ul>
+
+						<li> 
+							<a href = "#">About Us</a>
+						</li>
+
+						<li>
+							<a href = "#">Team</a>
+						</li>
+
+						<li>
+							Brand
+						</li>
+
+						<li>
+							Reviews
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class = "col-sm-3">
+
+					<h3>PRODUCTS</h3>
+
+					<ul>
+
+						<li>
+							<a href = "#">Cronicle</a>
+						</li>
+
+						<li>
+							<a href = "#">Cronicle Learning</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class = "col-sm-3">
+
+					<h3>CAREERS</h3>
+
+					<ul>
+
+						<li>
+							<a href = "#">Engineering</a>
+						</li>
+
+						<li>
+							<a href = "#">Product</a>
+						</li>
+
+						<li>
+							<a href = "#">Marketing</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class = "col-sm-3">
+
+					<h3>CONTACT</h3>
+
+					<ul>
+
+						<li>
+							<a href = "#">Contact Sales</a>
+						</li>
+
+						<li>
+							<a href = "#">Help Center</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class = "bottom">
+
+				<div class = "col-sm-12">
+
+					<div class = "row">
+
+						<div class = "col-sm-6 logo">
+
+							<div class = "row">
+
+				  				<img src = "main/image/logo.png" alt = "Cronicle Logo" width = "50" height = "50">
+
+								<p>Cronicle</p>
+
+							</div>
+
+						</div>
+
+						<div class = "col-sm-6 social">
+
+							<img src = "main/image/footer linkedin.svg" alt = "LinkedIn Logo" width = "25" height = "25">
+
+							<img src = "main/image/footer facebook.svg" alt = "Facebook Logo" width = "25" height = "25">
+
+							<img src = "main/image/footer instagram.svg" alt = "Instagram Logo" width = "25" height = "25">
+
+							<img src = "main/image/footer twitter.svg" alt = "Twitter Logo" width = "25" height = "25">
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+	<!-- Bootstrap 4.1 JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
