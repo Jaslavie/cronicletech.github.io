@@ -30,6 +30,10 @@ a:hover, a:focus, a:active  {
 	color: var(--cpurple);
 }
 
+button:focus, button:active {
+	outline: none;
+}
+
 button.primary {
 	background-color: var(--cpurple);
 	color: white;
@@ -38,6 +42,11 @@ button.primary {
 	border-radius: 5px;
 	box-shadow: 0 10px 20px 0 rgba(140, 82, 255, .45);
 	padding: 8.5px 15px;
+	transition: 0.25s ease background-color;
+}
+
+button.primary:hover, button.primary:focus, button.primary:active {
+	background-color: #6610f2;
 }
 
 button.secondary {
@@ -48,6 +57,11 @@ button.secondary {
 	border-radius: 5px;
 	box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .15);
 	padding: 8.5px 15px;
+	transition: 0.25s ease background-color;
+}
+
+button.secondary:hover, button.secondary:focus, button.secondary:active {
+	background-color: rgb(240, 240, 240);
 }
 
 div.top {
