@@ -286,7 +286,7 @@ footer div.social img[src *= "svg"] {
 
 @media (max-width: 600px) {
 
-	nav img, nav a.nav-link, nav button {
+	nav img, nav a.nav-link, nav button.primary, nav button.secondary {
 		margin-left: 30px;
 	}
 
