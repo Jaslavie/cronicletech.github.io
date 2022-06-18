@@ -194,7 +194,7 @@
 			padding: 0 50px;
 		}
 
-		div.home div.notif {
+		div.home div.notif, div.home div.for-you {
 			font-size: .85em;
 			text-align: center;
 			border: 1px solid #e9ebf0;
@@ -202,21 +202,42 @@
 			padding: 25px;
 		}
 
-		div.home div.notif p {
+		div.home div.for-you {
+			text-align: left;
+			margin-bottom: 50px;
+		}
+
+		div.home div.notif p, div.home div.for-you p {
 			margin-bottom: 0;
 		}
 
-		div.home div.for-you {
-			font-size: .85em;
-			border: 1px solid #e9ebf0;
-			border-radius: 5px;
-			padding: 50px 25px 0 25px;
-			margin-bottom: 50px;
+		div.home div.trending div.col-4, div.home div.trending div.col-7 {
+			padding: 0;
 		}
 
-		div.home div.for-you p {
-			margin-bottom: 50px;
+		div.home div.trending h2 {
+			font-size: 1.15em;
+			margin-top: 0;
 		}
+
+		div.home div.trending img.full {
+			box-shadow: 0 5px 20px #00000014;
+		}
+
+		div.home div.trending img[src *= "author"] {
+			box-shadow: none;
+			margin-bottom: 0;
+			border-radius: 50%;
+		}
+
+		div.home div.trending p.description {
+			font-size: 1em;
+			margin-top: 7.5px;
+			margin-left: 15px;
+		}
+
+
+
 
 		div.home div.agenda {
 			color: #7c828d;
@@ -349,15 +370,15 @@
 		/** Temporary Responsive CSS */
 		@media (max-width: 1185px) {
 			div.container-fluid {
-				display: none;
+				/** display: none; */
 			}
 		}
 
-		@media (min-width: 1185px) {
+		/** @media (min-width: 1185px) { */
 			div.small {
 				display: none;
 			}
-		}
+		/** } */
 	</style>
 </head>
 <body>
@@ -483,48 +504,49 @@
 									</div>
 
 									<!-- Trending -->
+									<h2>Trending</h2>
+
+									<div class = "trending">
+
+										<div class = "row">
+
+											<div class = "col-4">
+
+												<img src = "../learning/color-coded-notes/image.jpg" alt = "Learning with Color Coded Notes" class = "full">
+
+											</div>
+
+											<div class = "col-1"></div>
+
+											<div class = "col-7">
+
+												<h2>Color Coded Notes - A Productive Way to Study</h2>
+
+												<div class = "row">
+
+													<img src = "../learning/image/author elif.png" alt = "Author Elif" width = "40" height = "40">
+
+													<p class = "description">Elif Oktay</p>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+									<!-- For You -->
 									<h2>For You</h2>
 
 									<div class = "for-you">
 
 										<p>
-											“Maintain a firm grasp of the obvious at all times.”
-
-											<br>
-
-											- Jeff Bezos
-										</p>
-
-										<p>
-											“Ideas don’t come out fully formed , they only become clearer as you work on them . You just have to get started.” 
-
-											<br>
-
-											- Mark Zuckerberg
-										</p>
-
-										<p>
-											“In a world of scarce resources, globalization without new technology is unsustainable.” 
-
-											<br>
-
-											- Peter Thiel
-										</p>
-
-										<p>
 											"It is important that people look forward to coming to work in the morning and enjoy working." 
 
-											<br>
+											<br><br>
 
 											- Elon Musk
-										</p>
-
-										<p>
-											“Always deliver more than expected.” 
-
-											<br>
-
-											- Larry Page
 										</p>
 
 									</div>
