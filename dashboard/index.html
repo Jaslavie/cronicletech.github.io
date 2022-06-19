@@ -428,7 +428,15 @@
 
 		@media (max-width: 812px) {
 
-			div.resources div.content p.subtitle, div.resources div.content img[src *= "icon"] {
+			div.resources div.content p.subtitle {
+				display: none;
+			}
+
+			div.resources div.content p.break, div.resources div.content p.time {
+				display: none;
+			}
+
+			div.resources div.content img[src *= "icon"] {
 				display: none;
 			}
 
@@ -810,7 +818,7 @@
 
 									<img src = "../learning/image/icon clock.png" alt = "Clock Icon" width = "20" height = "20">
 
-									<p class = "description">4 Minute Read</p>
+									<p class = "description time">4 Minute Read</p>
 
 								</div>
 
