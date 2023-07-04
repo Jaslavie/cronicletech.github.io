@@ -5,5 +5,18 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 900;
+	font-weight: bold;
+}
+
+nav span.icon-bar {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	display: block;
+	width: 35px;
+	height: 3.5px;
+	margin-bottom: 5px;
+}
+
+nav button.navbar-toggler:active, nav button.navbar-toggler:focus {
+	outline: none;
 }
