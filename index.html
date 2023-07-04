@@ -20,6 +20,9 @@
 	<!-- Main CSS -->
 	<link rel = "stylesheet" href = "style.css">
 
+	<!-- font awesome library -->
+	<script src="https://kit.fontawesome.com/2584578032.js" crossorigin="anonymous"></script>
+	
 	<style>
 
 		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
@@ -48,6 +51,10 @@
 			color: #FFFFFF;
 		}
 
+		.container-fluid {
+			padding-left: 12%;
+			padding-right: 0%;
+		}
 		.center {
 			align-items: center;
 		}
@@ -109,8 +116,8 @@
 
 		span.line-break {
 			display: block; 
-			width: 30%; 
-			margin-left: 35%;  
+			width: 40%; 
+			margin: 0 auto;
 			border: 1px solid rgba(255, 255, 255, 0.75);
 		}
 
@@ -135,6 +142,9 @@
 			background-color: #15161E;
 		}
 
+		.menuIcon {
+			display: none;
+		}
 		nav a.navbar-brand p {
 		   	color: #FFFFFF;
 		    font-weight: bold;
@@ -149,6 +159,15 @@
 		header {
 			margin-top: 10%;
 			min-height: 100vh;
+		}
+
+		.hero-image {
+			align-items: center;
+			width: 50%;
+			margin-left: 90px;
+		}
+		.hero-text{
+			width: 35%;
 		}
 
 		header h1 {
@@ -299,6 +318,75 @@
 			font-size: .9em;
 			margin-bottom: 0;
 		}
+		/* responsiveness */
+
+		@media (max-width: 1160px) {
+			.navbar-brand {
+				padding-left: 3%;
+			}
+		}
+
+		@media (max-width: 760px) {
+			nav.container {
+				padding: 0 0%;
+			}
+		}
+
+		@media (max-width: 992px) {
+			p {
+				font-size: 20px;
+			}
+			.container-fluid {
+				padding: 0 10%;
+				
+			}
+			.menuIcon {
+			position: relative;
+			float: right;
+			font-size: 30px;
+			padding: 1% 5%;
+			border-radius: 5px;
+			cursor: pointer;
+			display: inline;
+			color: #FFFFFF;
+			}
+			.hero-text {
+				width: 80%;
+				display: flex;
+    			flex-direction: column;
+    			align-items: center;
+    			justify-content: center;
+    			width: 100%;
+			}
+			.hero-text h1 {
+				text-align: center;
+				font-size: 50px;
+			}
+			.hero-text p {
+				text-align: center;
+			}
+			.hero-image {
+				margin-left: 50px;
+				align-items: center;
+				justify-content: right;
+				display: flex;
+				width: 100%
+				
+			}
+			img[src = "image/header prototype.svg"] {
+   				margin: 70px auto;
+    			width: 150%;
+				display: block;
+				
+  			}
+			img[src = "image/header progress.png"] {
+				display: none;
+				/* width: 400px;
+				margin-left: -600px;
+				padding-top: 300px; */
+			}
+		}
+		
 
 		/* interactions */
 
@@ -326,7 +414,7 @@
 		<div class="container">
 
 			<a class="navbar-brand" href="#">
-
+			
 				<div class="row">
 
 					<img src="image/logo.webp" alt="Cronicle Logo" width="45" height="45">
@@ -334,16 +422,17 @@
 					<p>Cronicle</p>
 
 				</div>
+				<!-- responsive nav bar -->
+				
 
 			</a>
-
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="margin-left: 0; float: right;">
-
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-
-			</button>
+<!-- toggle responsive menu -->
+<script>
+	const toggle = () => {
+		document.getElementById('nav').classList.toggle('nactive')
+	};
+</script>
+			
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
@@ -360,9 +449,10 @@
 					<a href="#"><button class="primary">Join Now</button></a>
 
 				</span>
-
+				<!-- responsive nav bar -->
+				
 			</div>
-
+				<span class="fas fa-bars menuIcon" onclick="toggle()"></span>
 		</div>
 
 	</nav>
@@ -377,38 +467,42 @@
 		<div class = "container-fluid full">
 
 			<div class = "row">
+				<div class="hero-text">
+					
 
-				<div class = "col-sm-2"></div>
+						<h1>Tap into your <br> <span class = "text-gradient">Hidden genius</span></h1>
 
-				<div class = "col-sm-4" style ="margin-right:2%;">
+						<p>open source learning in topics you actually <b>care</b> about.</p>
 
-					<h1>Tap into your <br> <span class = "text-gradient">Hidden genius</span></h1>
+						<div class = "row">
 
-					<p>open source learning in topics you actually <b>care</b> about.</p>
+							
+								<button class = "primary">Join Waitlist</button>
+							
 
-					<div class = "row">
+							
+								<button class = "secondary">Donate</button>
+							
 
-						<a href = "#">
-							<button class = "primary">Join Waitlist</button>
-						</a>
-
-						<a href = "#">
-							<button class = "secondary">Donate</button>
-						</a>
-
-					</div>
+						</div>
 
 				</div>
-
+				
 				
 
-				<div class = "col-sm-5" style = "padding: 0;">
+				
+				<div class="hero-image">
+				
+				
+					<img src = "image/header prototype.svg" alt = "#" class = "full" style = "width: 100%; margin-left: 150px; width: 110%;">
 
-					<img src = "image/header prototype.svg" alt = "#" class = "full" style = "width: 100%; margin-left: 100px;">
+					<img src = "image/header progress.png" alt = "#" style = "max-width: 70vh; margin-top: -71px;">
 
-					<img src = "image/header progress.png" alt = "#" style = "width: 41vw; margin-top: -84px; margin-left: -90px;">
-
+				
 				</div>
+				
+			
+				
 
 			</div>
 
