@@ -92,6 +92,7 @@
 
 		div.row {
 			margin-left: 0;
+			margin: 0;
 		}
 
 		img.full {
@@ -117,8 +118,8 @@
 		span.line-break {
 			display: block; 
 			width: 40%; 
-			margin: 0 5%;
 			border: 1px solid rgba(255, 255, 255, 0.75);
+			margin: 0 auto 200px auto
 		}
 
 		span.text-gradient {
@@ -157,7 +158,7 @@
 		}
 
 		header {
-			margin-top: 10%;
+			margin: 10% 0 5% 0;
 			min-height: 100vh;
 		}
 
@@ -212,6 +213,7 @@
 			margin-bottom: 50px;
 		}
 
+
 		div.features p.highlight {
 			color: #8C52FF;
 			font-size: 1.15em;
@@ -226,6 +228,9 @@
 			background: rgba(94, 100, 153, 0.60);
 			text-align: center;
 			padding: 7% 10%;
+			
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		div.reading h2 {
@@ -240,20 +245,28 @@
 			padding: 20px;
 		}
 
+		.row-semi-full {
+			flex-wrap: wrap;
+			display: flex;
+			padding: 80px 0;
+		}
+
 		div.reading div.panel h3 {
 			font-size: 1.25em;
 			margin: 25px 0;
 			min-height: 50px;
 		}
-		div.panel .row {
-			flex-wrap: nowrap;
-			justify-content: center;
+		div.reading div.panel div.center {
+  			display: flex;
+  			justify-content: center;
 		}
+
 		div.reading div.panel div.center div.highlight {
 			background-color: #8C52FF;
 			border-radius: 40px;
 			margin-bottom: 15px;
 			padding: 5px 20px;
+			margin:  5px;
 		}
 
 		div.reading div.panel div.center div.highlight p {
@@ -318,21 +331,71 @@
 			font-size: .9em;
 			margin-bottom: 0;
 		}
+
+
 		/* responsiveness */
 
+		@media (max-width: 1440px) {
+			.mobile-image {
+				display: none;
+			}
+		}
 		@media (max-width: 1160px) {
 			.navbar-brand {
 				padding-left: 3%;
 			}
+			div.reading div.row {
+				flex-direction: column;
+				align-content: center;
+				width: 100%;
+			}
+			div.reading div.panel div.center div.highlight {
+				width: 100%;
+			}
+	
+			
+		}
+		@media (max-width: 1390px) {
+			div.reading {
+				flex-direction:column;
+				flex-wrap: wrap;
+			}
+			div.reading div.panel div.center div.highlight {
+				width: 100%;
+			}
+			div.reading div.panel {
+				width: 100%;
+			}
+			
+	
 		}
 
 		@media (max-width: 760px) {
 			nav.container {
 				padding: 0 0%;
 			}
+			.mobile-image {
+    			display: block;
+ 			}
+  			.desktop-image {
+    			display: none;
+  			}
+			
 		}
 
 		@media (max-width: 992px) {
+			div.full {
+				max-height: 80vh;
+			}
+			div.line-break {
+				margin: 0;
+			}
+			.mobile-image {
+				display: block;
+			}
+			.desktop-image {
+				display: none;
+			}
 			p {
 				font-size: 20px;
 			}
@@ -385,6 +448,17 @@
 				margin-left: -600px;
 				padding-top: 300px; */
 			}
+			.mid-text {
+				order: 1;
+			}
+			.mid-image {
+				order: 2;
+			}
+			div.reading {
+				height: 100vh;
+			}
+			
+
 		}
 		
 
@@ -492,14 +566,10 @@
 
 				
 				<div class="hero-image">
-				
-				
-					<img src = "image/header prototype.svg" alt = "#" class = "full" style = "width: 100%; margin-left: 150px; width: 110%;">
-
-					<img src = "image/header progress.png" alt = "#" style = "max-width: 70vh; margin-top: -71px;">
-
-				
-				</div>
+					<img src="image/header prototype.svg" class="mobile-image" class="full" style="width: 110%;">
+					<img src="image/header prototype fullscreen.svg" class="desktop-image" alt="#" class="full" style=" margin-left: 22px; width: 110%;">
+					<img src="image/header progress.png" alt="#" style="max-width: 70vh; margin-top: -71px;">
+				  </div>
 				
 			
 				
@@ -544,7 +614,7 @@
 	<!-- Collaborative -->
 	<div class = "container collab full">
 
-		<span class = "blue-gradient" style = "position: absolute; right: 0; top: 200%;"></span>
+		<img src="image/blue-gradient-collaborative.png" style="position: absolute; top: 1638px; right: 0; width: 30%;">
 
 		<div class = "row">
 
@@ -575,10 +645,10 @@
 
 		<span class = "blue-gradient" style = "position: absolute; right: 0; top: 450%;"></span>
 
-		<span class = "line-break" style = "margin-bottom: 250px;"></span>
+		<span class = "line-break"></span>
 
 		<!-- Diversification -->
-		<div class = "row semi-full">
+		<div class = "row-semi-full">
 
 			<div class = "col-sm-1"></div>
 
@@ -601,29 +671,20 @@
 		</div>
 
 		<!-- Open Source -->
-		<div class = "row semi-full">
-
-			<div class = "col-sm-1"></div>
-
-			<div class = "col-sm-5">
-				
-				<img src = "image/2.png" alt = "" class = "full">
-
+		<div class="row-semi-full">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5 mid-image">
+				<img src="image/2.png" alt="" class="full">
 			</div>
-
-			<div class = "col-sm-5">
-
-				<p class = "highlight">OPEN SOURCE</p>
-
+			<div class="col-sm-5 mid-text">
+				<p class="highlight">OPEN SOURCE</p>
 				<h3><b>Share your wisdom</b> with your peers</h3>
-
-				<p>All resources are curated by your peers, and you. Share insights, videos, articles, or honestly anything, anywhere, anytime; <span class = "highlight">No publishing bureaucracy.</span></p>
-
+				<p>All resources are curated by your peers, and you. Share insights, videos, articles, or honestly anything, anywhere, anytime; <span class="highlight">No publishing bureaucracy.</span></p>
 			</div>
 
 		</div>
 
-		<div class = "row semi-full">
+		<div class = "row-semi-full">
 
 			<div class = "col-sm-1"></div>
 
@@ -681,7 +742,7 @@
 							<div class="center">
 								<div class = "row">
 
-									<div class = "highlight" style = "margin-right: 10px;">
+									<div class = "highlight">
 										<p>finances</p>
 									</div>
 
@@ -707,7 +768,7 @@
 								<div class="center">
 									<div class = "row">
 
-										<div class = "highlight" style = "margin-right: 10px;">
+										<div class = "highlight">
 											<p>inspiration</p>
 										</div>
 
@@ -734,7 +795,7 @@
 							<div class="center">
 								<div class = "row">
 
-									<div class = "highlight" style = "margin-right: 10px;">
+									<div class = "highlight">
 										<p>productivity</p>
 									</div>
 
